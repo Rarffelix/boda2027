@@ -29,8 +29,6 @@
             backdrop-filter: blur(10px);
             border: 1px solid rgba(255, 255, 255, 0.3);
         }
-        .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s ease-out; }
-        .reveal.active { opacity: 1; transform: translateY(0); }
     </style>
 </head>
 <body class="bg-bodas-crema text-bodas-oscuro font-sans" style="background-image: url('https://www.transparenttextures.com/patterns/natural-paper.png');">
@@ -55,25 +53,25 @@
         </div>
     </section>
 
-    <section class="py-20 px-6 max-w-4xl mx-auto text-center reveal">
+    <section class="py-20 px-6 max-w-4xl mx-auto text-center">
         <h2 class="font-serif text-3xl mb-12 italic text-bodas-oro">Faltan solo...</h2>
         <div id="timer" class="grid grid-cols-3 gap-4 md:gap-8 text-center">
-            <div class="glass p-6 rounded-2xl shadow-sm border border-white/50">
+            <div class="glass p-6 rounded-2xl shadow-sm">
                 <span id="dias" class="block text-4xl md:text-5xl font-serif text-bodas-oro">00</span>
                 <span class="text-xs uppercase tracking-widest text-gray-500">Días</span>
             </div>
-            <div class="glass p-6 rounded-2xl shadow-sm border border-white/50">
+            <div class="glass p-6 rounded-2xl shadow-sm">
                 <span id="horas" class="block text-4xl md:text-5xl font-serif text-bodas-oro">00</span>
                 <span class="text-xs uppercase tracking-widest text-gray-500">Horas</span>
             </div>
-            <div class="glass p-6 rounded-2xl shadow-sm border border-white/50">
+            <div class="glass p-6 rounded-2xl shadow-sm">
                 <span id="minutos" class="block text-4xl md:text-5xl font-serif text-bodas-oro">00</span>
                 <span class="text-xs uppercase tracking-widest text-gray-500">Minutos</span>
             </div>
         </div>
     </section>
 
-    <section class="py-20 bg-white/50 reveal">
+    <section class="py-20 bg-white/50">
         <div class="max-w-5xl mx-auto px-6">
             <div class="text-center max-w-2xl mx-auto mb-16">
                 <h3 class="font-serif text-4xl mb-6 italic text-bodas-oro">La Celebración</h3>
@@ -103,13 +101,13 @@
                         <p>C. 4, 85134 Cdad. Obregón, Son.</p>
                         <p class="font-semibold italic">⏰ 21:00 hrs</p>
                     </div>
-                    <a href="https://maps.app.goo.gl/YourLinkHere" target="_blank" class="mt-auto border border-bodas-oro text-bodas-oro px-8 py-2 rounded-full hover:bg-bodas-oro hover:text-white transition-all text-xs uppercase tracking-widest font-bold">Ver Salón</a>
+                    <a href="http://googleusercontent.com/maps.google.com/6" target="_blank" class="mt-auto border border-bodas-oro text-bodas-oro px-8 py-2 rounded-full hover:bg-bodas-oro hover:text-white transition-all text-xs uppercase tracking-widest font-bold">Ver Salón</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="py-20 px-6 max-w-2xl mx-auto reveal">
+    <section class="py-20 px-6 max-w-2xl mx-auto">
         <div class="glass p-10 rounded-[3rem] shadow-xl text-center border border-white/50">
             <h2 class="font-serif text-4xl mb-4 italic text-bodas-oro">¿Nos acompañas?</h2>
             <p class="text-gray-500 mb-8 font-light text-sm">Confirma tu asistencia directamente a nuestro WhatsApp.</p>
@@ -145,14 +143,6 @@
     </footer>
 
     <script>
-        // Animación de aparición al hacer scroll
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) entry.target.classList.add('active');
-            });
-        }, { threshold: 0.1 });
-        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-
         // Lógica del Contador
         const targetDate = new Date("March 6, 2027 18:00:00").getTime();
         function updateTimer() {
@@ -164,4 +154,24 @@
                 document.getElementById("minutos").innerText = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
             }
         }
-        setInterval(updateTimer,
+        setInterval(updateTimer, 1000);
+        updateTimer();
+
+        // Envío a WhatsApp
+        function enviarConfirmacion() {
+            const nombre = document.getElementById('input_nombre').value;
+            const asistencia = document.getElementById('input_asistencia').value;
+            const mensajeExtra = document.getElementById('input_mensaje').value;
+            
+            if (nombre.trim() === "") {
+                alert("Por favor, ingresa tu nombre antes de confirmar.");
+                return;
+            }
+
+            const miTelefono = "526441413170"; 
+            const texto = `¡Hola! 💍\n\nQuiero confirmar mi asistencia para la boda:\n\n*Nombre:* ${nombre}\n*Respuesta:* ${asistencia}\n*Notas:* ${mensajeExtra || 'Sin notas adicionales.'}\n\n¡Nos vemos el 6 de marzo!`;
+            window.open(`https://wa.me/${miTelefono}?text=${encodeURIComponent(texto)}`, '_blank');
+        }
+    </script>
+</body>
+</html>
