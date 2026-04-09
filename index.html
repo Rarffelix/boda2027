@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nuestra Boda | 06.03.2027</title>
+    <title>Ricardo & Denisse | 06.03.2027</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <script>
@@ -11,9 +11,9 @@
             theme: {
                 extend: {
                     colors: {
-                        'bodas-oro': '#C5A059',      // Dorado elegante
-                        'bodas-crema': '#F9F7F2',    // Crema/Arena para el fondo
-                        'bodas-oscuro': '#2D2926',   // Gris casi negro para textos
+                        'bodas-oro': '#C5A059',
+                        'bodas-crema': '#F9F7F2',
+                        'bodas-oscuro': '#2D2926',
                     },
                     fontFamily: {
                         serif: ['Playfair Display', 'serif'],
@@ -35,23 +35,19 @@
 </head>
 <body class="bg-bodas-crema text-bodas-oscuro font-sans" style="background-image: url('https://www.transparenttextures.com/patterns/natural-paper.png');">
 
-    <section class="relative h-screen flex items-center justify-center text-white">
-        <div class="absolute inset-0 z-0 bg-bodas-verde"> <img src="foto.boda.jpeg" 
-                 class="w-full h-full object-cover object-center md:object-contain" 
-                 alt="Ricardo y Denisse">
-    
+    <section class="relative h-screen flex items-center justify-center text-white overflow-hidden bg-bodas-crema">
+        <div class="absolute inset-0 z-0">
+            <img src="foto.boda.jpeg" class="w-full h-full object-cover object-center md:object-contain" alt="Ricardo y Denisse">
             <div class="absolute inset-0 bg-black/40"></div>
         </div>
         
         <div class="relative z-10 text-center px-4 w-full">
             <p class="uppercase tracking-[0.3em] text-xs md:text-sm mb-4 animate-pulse">¡Nos Casamos!</p>
-    
             <h1 class="font-serif text-4xl sm:text-5xl md:text-7xl lg:text-8xl mb-6 italic leading-tight">
-                Ricardo <span class="block md:inline-block text-bodas-white md:text-white">&</span> Denisse
+                Ricardo <span class="block md:inline-block text-bodas-oro md:text-white">&</span> Denisse
             </h1>
-    
             <div class="w-12 h-[1px] bg-white mx-auto mb-6"></div>
-            <p class="text-lg md:text-2xl font-light tracking-widest">06 . MARZO . 2027</p>
+            <p class="text-lg md:text-2xl font-light tracking-widest uppercase">06 . Marzo . 2027</p>
         </div> 
 
         <div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce">
@@ -61,148 +57,111 @@
 
     <section class="py-20 px-6 max-w-4xl mx-auto text-center reveal">
         <h2 class="font-serif text-3xl mb-12 italic text-bodas-oro">Faltan solo...</h2>
-        <div class="grid grid-cols-3 gap-4 md:gap-8 text-center">
-            <div class="glass p-6 rounded-2xl">
-                <span id="dias" class="block text-4xl font-serif text-bodas-oro">00</span>
-                <span class="text-xs uppercase tracking-widest text-oro-500">Días</span>
+        <div id="timer" class="grid grid-cols-3 gap-4 md:gap-8 text-center">
+            <div class="glass p-6 rounded-2xl shadow-sm border border-white/50">
+                <span id="dias" class="block text-4xl md:text-5xl font-serif text-bodas-oro">00</span>
+                <span class="text-xs uppercase tracking-widest text-gray-500">Días</span>
             </div>
-            <div class="glass p-6 rounded-2xl">
-                <span id="horas" class="block text-4xl font-serif text-bodas-oro">00</span>
-                <span class="text-xs uppercase tracking-widest text-oro-500">Horas</span>
+            <div class="glass p-6 rounded-2xl shadow-sm border border-white/50">
+                <span id="horas" class="block text-4xl md:text-5xl font-serif text-bodas-oro">00</span>
+                <span class="text-xs uppercase tracking-widest text-gray-500">Horas</span>
             </div>
-            <div class="glass p-6 rounded-2xl">
-                <span id="minutos" class="block text-4xl font-serif text-bodas-oro">00</span>
-                <span class="text-xs uppercase tracking-widest text-oro-500">Minutos</span>
+            <div class="glass p-6 rounded-2xl shadow-sm border border-white/50">
+                <span id="minutos" class="block text-4xl md:text-5xl font-serif text-bodas-oro">00</span>
+                <span class="text-xs uppercase tracking-widest text-gray-500">Minutos</span>
             </div>
         </div>
     </section>
 
     <section class="py-20 bg-white/50 reveal">
-            <div class="max-w-5xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
-                <div class="text-center max-w-2xl mx-auto mb-16">
-                    <h3 class="font-serif text-4xl mb-6 italic text-bodas-oro">La Celebración</h3>
-                    <p class="text-gray-600 leading-relaxed mb-8">
-                        Queremos que nuestra unión sea recordada por la alegría y la compañía de quienes más amamos. 
-                        La ceremonia y recepción se llevarán a cabo en un lugar lleno de magia.
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h3 class="font-serif text-4xl mb-6 italic text-bodas-oro">La Celebración</h3>
+                <p class="text-gray-600 leading-relaxed font-light">
+                    Queremos que nuestra unión sea recordada por la alegría y la compañía de quienes más amamos. 
+                    La ceremonia y recepción se llevarán a cabo en un lugar lleno de magia.
                 </p>
             </div>
+            
             <div class="grid md:grid-cols-2 gap-8 md:gap-12">
                 <div class="glass p-8 rounded-[2rem] shadow-sm border border-white flex flex-col items-center text-center">
                     <span class="text-4xl mb-4 text-bodas-oro">💍</span>
                     <h4 class="font-serif text-2xl mb-4 italic text-bodas-oro">Ceremonia Religiosa</h4>
                     <div class="space-y-2 mb-8 text-sm text-gray-700">
-                        <p class="font-bold text-base text-bodas-oscuro">[Parroquia de Nuestra Señora de Guadalupe]</p>
-                        <p>[Calle Hermenegildo Galeana, Centro, Urb. No. 2, 85000 Cdad. Obregón, Son.]</p>
-                        <p class="font-semibold italic">⏰ 16:00 hrs</p>
+                        <p class="font-bold text-base text-bodas-oscuro">[Nombre de la Iglesia]</p>
+                        <p>[Dirección de la Iglesia, Ciudad Obregón]</p>
+                        <p class="font-semibold italic">⏰ 18:00 hrs</p>
+                    </div>
+                    <a href="#" target="_blank" class="mt-auto border border-bodas-oro text-bodas-oro px-8 py-2 rounded-full hover:bg-bodas-oro hover:text-white transition-all text-xs uppercase tracking-widest font-bold">Ver Iglesia</a>
                 </div>
-                <a href="https://maps.app.goo.gl/KXgWvDhPHqAzsEX69" target="_blank" class="mt-auto border border-bodas-oro text-bodas-oro px-8 py-2 rounded-full hover:bg-bodas-oro hover:text-white transition-all text-xs uppercase tracking-widest font-bold">Ver Iglesia</a>
+
+                <div class="glass p-8 rounded-[2rem] shadow-sm border border-white flex flex-col items-center text-center">
+                    <span class="text-4xl mb-4 text-bodas-oro">🥂</span>
+                    <h4 class="font-serif text-2xl mb-4 italic text-bodas-oro">Recepción</h4>
+                    <div class="space-y-2 mb-8 text-sm text-gray-700">
+                        <p class="font-bold text-base text-bodas-oscuro">Campo Guadalupe La Pista</p>
+                        <p>C. 4, 85134 Cdad. Obregón, Son.</p>
+                        <p class="font-semibold italic">⏰ 21:00 hrs</p>
+                    </div>
+                    <a href="https://maps.app.goo.gl/YourLinkHere" target="_blank" class="mt-auto border border-bodas-oro text-bodas-oro px-8 py-2 rounded-full hover:bg-bodas-oro hover:text-white transition-all text-xs uppercase tracking-widest font-bold">Ver Salón</a>
+                </div>
             </div>
-                
-    <div class="glass p-8 rounded-[2rem] shadow-sm border border-white flex flex-col items-center text-center">
-        <span class="text-4xl mb-4 text-bodas-oro">🥂</span>
-        <h4 class="font-serif text-2xl mb-4 italic text-bodas-oro">Recepción</h4>
-        <div class="space-y-2 mb-8 text-sm text-gray-700">
-            <p class="font-bold text-base text-bodas-oscuro">Campo Guadalupe La Pista</p>
-            <p>C. 4, 85134 Cdad. Obregón, Son.</p>
-            <p class="font-semibold italic">⏰ 21:00 hrs</p>
         </div>
-        <a href="https://maps.app.goo.gl/oKdVCFq2ytKBZG5k6" target="_blank" class="inline-block mt-8 border border-bodas-oro text-bodas-oro px-8 py-3 rounded-full hover:bg-bodas-oro hover:text-white transition-all duration-300 tracking-widest text-sm uppercase">Ver Mapa</a>
-    </div>
-    </div> </div> </section> <section class="py-20 px-6 max-w-2xl mx-auto reveal">
-    </div>
+    </section>
+
     <section class="py-20 px-6 max-w-2xl mx-auto reveal">
-    <div class="glass p-10 rounded-[3rem] shadow-xl text-center border border-white/50">
-        <h2 class="font-serif text-4xl mb-4 italic text-bodas-oro">¿Nos acompañas?</h2>
-        <p class="text-gray-500 mb-8 font-light">Confirma tu asistencia directamente a nuestro WhatsApp.</p>
-        
-        <form id="whatsappForm" class="space-y-6 text-left">
-            <div>
-                <label class="text-[10px] uppercase tracking-[0.2em] ml-2 font-semibold text-gray-400">Nombre Completo</label>
-                <input type="text" id="input_nombre" placeholder="Ej. Juan Pérez" class="w-full bg-transparent border-b border-gray-300 focus:border-bodas-oro outline-none py-3 px-2 transition-all font-light" required>
-            </div>
+        <div class="glass p-10 rounded-[3rem] shadow-xl text-center border border-white/50">
+            <h2 class="font-serif text-4xl mb-4 italic text-bodas-oro">¿Nos acompañas?</h2>
+            <p class="text-gray-500 mb-8 font-light text-sm">Confirma tu asistencia directamente a nuestro WhatsApp.</p>
             
-            <div>
-                <label class="text-[10px] uppercase tracking-[0.2em] ml-2 font-semibold text-gray-400">¿Asistirás?</label>
-                <select id="input_asistencia" class="w-full bg-transparent border-b border-gray-300 focus:border-bodas-oro outline-none py-3 px-2 transition-all font-light">
-                    <option value="¡Sí, ahí estaremos!">¡Sí, con mucho gusto!</option>
-                    <option value="Lo sentimos, no podremos asistir">No podré asistir</option>
-                </select>
-            </div>
+            <form id="whatsappForm" class="space-y-6 text-left">
+                <div>
+                    <label class="text-[10px] uppercase tracking-[0.2em] ml-2 font-semibold text-gray-400">Nombre Completo</label>
+                    <input type="text" id="input_nombre" placeholder="Ej. Juan Pérez" class="w-full bg-transparent border-b border-gray-300 focus:border-bodas-oro outline-none py-3 px-2 transition-all font-light" required>
+                </div>
+                
+                <div>
+                    <label class="text-[10px] uppercase tracking-[0.2em] ml-2 font-semibold text-gray-400">¿Asistirás?</label>
+                    <select id="input_asistencia" class="w-full bg-transparent border-b border-gray-300 focus:border-bodas-oro outline-none py-3 px-2 transition-all font-light">
+                        <option value="¡Sí, ahí estaremos!">¡Sí, con mucho gusto!</option>
+                        <option value="Lo sentimos, no podremos asistir">No podré asistir</option>
+                    </select>
+                </div>
 
-            <div>
-                <label class="text-[10px] uppercase tracking-[0.2em] ml-2 font-semibold text-gray-400">Mensaje especial o alergias</label>
-                <textarea id="input_mensaje" placeholder="Ej. Somos 2 adultos. Soy alérgico al camarón." class="w-full bg-transparent border-b border-gray-300 focus:border-bodas-oro outline-none py-3 px-2 transition-all font-light h-20 resize-none"></textarea>
-            </div>
+                <div>
+                    <label class="text-[10px] uppercase tracking-[0.2em] ml-2 font-semibold text-gray-400">Mensaje especial o alergias</label>
+                    <textarea id="input_mensaje" placeholder="Ej. Somos 2 adultos. Soy alérgico al camarón." class="w-full bg-transparent border-b border-gray-300 focus:border-bodas-oro outline-none py-3 px-2 transition-all font-light h-20 resize-none"></textarea>
+                </div>
 
-            <button type="button" onclick="enviarConfirmacion()" 
-                class="w-full bg-bodas-oro text-white py-5 rounded-full hover:bg-bodas-oscuro hover:shadow-lg transition-all duration-500 tracking-[0.2em] uppercase text-xs font-bold mt-4 shadow-md">
-                Confirmar por WhatsApp
-            </button>
-        </form>
-    </div>
-</section>
-
-<script>
-    function enviarConfirmacion() {
-        const nombre = document.getElementById('input_nombre').value;
-        const asistencia = document.getElementById('input_asistencia').value;
-        const mensajeExtra = document.getElementById('input_mensaje').value;
-        
-        // Validación básica
-        if (nombre.trim() === "") {
-            alert("Por favor, ingresa tu nombre antes de confirmar.");
-            return;
-        }
-
-        // TU NÚMERO DE TELÉFONO (Formato: 52 + 1 + 10 dígitos para México)
-        // Ejemplo: 5216441234567
-        const miTelefono = "5216441413170"; 
-
-        // Estructura del mensaje que recibirás
-        const texto = `¡Hola! 💍\n\nQuiero confirmar mi asistencia para la boda:\n\n*Nombre:* ${nombre}\n*Respuesta:* ${asistencia}\n*Notas:* ${mensajeExtra || 'Sin notas adicionales.'}\n\n¡Nos vemos el 6 de marzo!`;
-        
-        // Codificar el texto para URL
-        const mensajeCodificado = encodeURIComponent(texto);
-        
-        // Abrir WhatsApp en una nueva pestaña (target="_blank" implícito)
-        window.open(`https://wa.me/${miTelefono}?text=${mensajeCodificado}`, '_blank');
-    }
-</script>
+                <button type="button" onclick="enviarConfirmacion()" class="w-full bg-bodas-oro text-white py-5 rounded-full hover:bg-bodas-oscuro hover:shadow-lg transition-all duration-500 tracking-[0.2em] uppercase text-xs font-bold mt-4 shadow-md">
+                    Confirmar por WhatsApp
+                </button>
+            </form>
+        </div>
+    </section>
 
     <footer class="py-10 text-center opacity-40 text-xs tracking-[0.5em]">
-        R & D • 06.03.2027
+        RICARDO & DENISSE • 06.03.2027
     </footer>
 
     <script>
-        // Animación al hacer scroll
+        // Animación de aparición al hacer scroll
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) entry.target.classList.add('active');
             });
         }, { threshold: 0.1 });
-
         document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
-        // Cuenta Regresiva
+        // Lógica del Contador
         const targetDate = new Date("March 6, 2027 18:00:00").getTime();
-        setInterval(() => {
+        function updateTimer() {
             const now = new Date().getTime();
             const diff = targetDate - now;
-            document.getElementById("dias").innerText = Math.floor(diff / (1000 * 60 * 60 * 24));
-            document.getElementById("horas").innerText = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            document.getElementById("minutos").innerText = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-        }, 1000);
-
-        // Envío a WhatsApp
-        function confirmar() {
-            const nom = document.getElementById('nombre').value;
-            const asis = document.getElementById('asistencia').value;
-            if(!nom) return alert("Por favor escribe tu nombre");
-            
-            const num = "526441413170"; // Pon aquí tu número
-            const msg = encodeURIComponent(`💍 ¡Hola! Soy ${nom} y confirmo mi asistencia: ${asis}. ¡Nos vemos en marzo!`);
-            window.open(`https://wa.me/${num}?text=${msg}`, '_blank');
+            if (diff > 0) {
+                document.getElementById("dias").innerText = Math.floor(diff / (1000 * 60 * 60 * 24));
+                document.getElementById("horas").innerText = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                document.getElementById("minutos").innerText = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            }
         }
-    </script>
-</t>
-</html>
+        setInterval(updateTimer,
