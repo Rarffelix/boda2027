@@ -36,7 +36,6 @@
     <!-- HERO SECTION -->
     <section class="relative h-screen flex items-center justify-center text-white overflow-hidden" style="background-color: #F9F7F2;">
         <div class="absolute inset-0 z-0">
-            <!-- FOTO PRINCIPAL ACTUALIZADA -->
             <img src="savetodate.jpg" class="w-full h-full object-cover object-top md:object-center" alt="Ricardo y Denisse">
             <div class="absolute inset-0 bg-black/45"></div>
         </div>
@@ -101,10 +100,10 @@
         </div>
     </section>
 
-    <!-- LA CELEBRACIÓN (SOLO RECEPCIÓN) -->
+    <!-- LA CELEBRACIÓN CON FOTO INTERMEDIA -->
     <section class="py-20 bg-white/50">
         <div class="max-w-5xl mx-auto px-6">
-            <div class="text-center max-w-2xl mx-auto mb-16">
+            <div class="text-center max-w-2xl mx-auto mb-12">
                 <h3 class="font-serif text-4xl mb-6 italic text-bodas-oro">La Celebración</h3>
                 <p class="text-gray-600 leading-relaxed font-light">
                     Queremos que nuestra unión sea recordada por la alegría y la compañía de quienes más amamos. 
@@ -112,6 +111,12 @@
                 </p>
             </div>
             
+            <!-- FOTO ANIOS -->
+            <div class="max-w-xl mx-auto mb-12 overflow-hidden rounded-[2.5rem] shadow-lg border-2 border-white">
+                <img src="Anios.jpg" class="w-full h-80 sm:h-96 object-cover object-center hover:scale-105 transition-all duration-700" alt="Nuestra Historia">
+            </div>
+
+            <!-- TARJETA RECEPCIÓN -->
             <div class="max-w-lg mx-auto">
                 <div class="glass p-8 rounded-[2rem] shadow-sm border border-white flex flex-col items-center text-center">
                     <span class="text-4xl mb-4 text-bodas-oro">🥂</span>
@@ -229,6 +234,7 @@
     </footer>
 
     <script>
+        // Lógica del Contador
         const targetDate = new Date(2026, 11, 11, 17, 0, 0).getTime();
         function updateTimer() {
             const now = new Date().getTime();
@@ -242,6 +248,7 @@
         setInterval(updateTimer, 1000);
         updateTimer();
 
+        // Envío a WhatsApp
         function enviarConfirmacion() {
             const nombre = document.getElementById('input_nombre').value;
             const asistencia = document.getElementById('input_asistencia').value;
