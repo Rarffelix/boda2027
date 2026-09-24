@@ -46,7 +46,7 @@
                 Ricardo <span class="block md:inline-block text-bodas-oro md:text-white">&</span> Denisse
             </h1>
             <div class="w-12 h-[1px] bg-white mx-auto mb-6"></div>
-            <p class="text-lg md:text-2xl font-light tracking-widest uppercase mb-6">06 . Marzo . 2027</p>
+            <p class="text-lg md:text-2xl font-light tracking-widest uppercase mb-6">11 . Diciembre . 2026</p>
             <div class="max-w-lg mx-auto">
                 <p class="text-sm md:text-base italic font-light leading-relaxed">
                     "Lo que Dios Unió, no lo separe el hombre."
@@ -59,7 +59,7 @@
         </div>
     </section>
 
-    <!-- PADRES, PADRINOS Y CONTADOR -->
+    <!-- PADRES Y CONTADOR -->
     <section class="py-12 px-6 max-w-4xl mx-auto text-center">
         <h3 class="font-serif text-2xl mb-8 italic text-bodas-oro">Con la bendición de Dios y nuestros padres:</h3>
         
@@ -228,8 +228,8 @@
     </footer>
 
     <script>
-        // Lógica del Contador
-        const targetDate = new Date("december 11, 2026 17:00:00").getTime();
+        // Lógica del Contador optimizada para cualquier navegador
+        const targetDate = new Date(2026, 11, 11, 17, 0, 0).getTime();
         function updateTimer() {
             const now = new Date().getTime();
             const diff = targetDate - now;
@@ -254,7 +254,7 @@
             }
 
             const miTelefono = "526441413170"; 
-            const texto = `¡Hola! 💍\n\nQuiero confirmar mi asistencia para la boda:\n\n*Nombre:* ${nombre}\n*Respuesta:* ${asistencia}\n*Notas:* ${mensajeExtra || 'Sin notas adicionales.'}\n\n¡Nos vemos el 6 de marzo!`;
+            const texto = `¡Hola! 💍\n\nQuiero confirmar mi asistencia para la boda:\n\n*Nombre:* ${nombre}\n*Respuesta:* ${asistencia}\n*Notas:* ${mensajeExtra || 'Sin notas adicionales.'}\n\n¡Nos vemos el 11 de diciembre!`;
             window.open(`https://wa.me/${miTelefono}?text=${encodeURIComponent(texto)}`, '_blank');
         }
     </script>
