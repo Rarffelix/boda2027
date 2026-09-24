@@ -33,28 +33,34 @@
 </head>
 <body class="bg-bodas-crema text-bodas-oscuro font-sans" style="background-color: #F9F7F2;">
 
-    <!-- HERO SECTION -->
-    <section class="relative h-screen flex items-start pt-[15vh] md:pt-[20vh] justify-center text-white overflow-hidden" style="background-color: #F9F7F2;">
+    <!-- HERO SECTION (CORREGIDO PARA NO TAPAR ROSTROS) -->
+    <section class="relative h-screen flex flex-col items-center justify-start pt-16 md:pt-20 text-white overflow-hidden" style="background-color: #F9F7F2;">
         <div class="absolute inset-0 z-0">
-            <img src="savetodate.jpg" class="w-full h-full object-cover object-top md:object-center" alt="Ricardo y Denisse">
-            <div class="absolute inset-0 bg-black/45"></div>
+            <!-- object-top asegura que siempre se vea la pared blanca de arriba -->
+            <img src="savetodate.jpg" class="w-full h-full object-cover object-top" alt="Ricardo y Denisse">
+            <div class="absolute inset-0 bg-black/40"></div>
         </div>
         
         <div class="relative z-10 text-center px-4 w-full">
-            <p class="uppercase tracking-[0.3em] text-xs md:text-sm mb-4 animate-pulse">¡Nos Casamos!</p>
-            <h1 class="font-serif text-4xl sm:text-5xl md:text-7xl lg:text-8xl mb-6 italic leading-tight drop-shadow-lg">
-                Ricardo <span class="block md:inline-block text-bodas-rosa md:text-white">&</span> Denisse
+            <p class="uppercase tracking-[0.3em] text-xs md:text-sm mb-3 animate-pulse">¡Nos Casamos!</p>
+            
+            <!-- El ampersand (&) ya no brinca de línea para ahorrar espacio vertical -->
+            <h1 class="font-serif text-4xl sm:text-5xl md:text-7xl lg:text-8xl mb-4 italic leading-tight drop-shadow-lg">
+                Ricardo <span class="text-bodas-rosa mx-1">&</span> Denisse
             </h1>
-            <div class="w-12 h-[1px] bg-white mx-auto mb-6"></div>
-            <p class="text-lg md:text-2xl font-light tracking-widest uppercase mb-6 drop-shadow-md">11 . Diciembre . 2026</p>
+            
+            <div class="w-12 h-[1px] bg-white mx-auto mb-4"></div>
+            <p class="text-lg md:text-2xl font-light tracking-widest uppercase mb-4 drop-shadow-md">11 . Diciembre . 2026</p>
+            
             <div class="max-w-lg mx-auto drop-shadow-md">
-                <p class="text-sm md:text-base italic font-light leading-relaxed">
-                    "Lo que Dios Unió, no lo separe el hombre."
+                <p class="text-xs md:text-base italic font-light leading-relaxed">
+                    "Lo que Dios unió, no lo separe el hombre."
                 </p>
-                <p class="text-[10px] uppercase tracking-widest mt-2 opacity-80">Marcos 10:9</p>
+                <p class="text-[10px] uppercase tracking-widest mt-1 opacity-80">Marcos 10:9</p>
             </div>
         </div> 
-        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce">
+
+        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce z-10 text-white">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
         </div>
     </section>
